@@ -43,9 +43,9 @@ public class JwtUtil {
     }
 
     // jwt是否过期
-    public boolean isTokenExpired(Claims claims) {
+    /*public boolean isTokenExpired(Claims claims) {
         return claims.getExpiration().before(new Date());
-    }
+    }*/
 
 
 }
