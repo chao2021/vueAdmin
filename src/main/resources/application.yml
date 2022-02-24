@@ -1,0 +1,37 @@
+# 端口
+server:
+  port: 8081
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vueadmin?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+# Redis
+  redis:
+    port: 6379
+    host: 192.168.147.47
+# DateFormat
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+#  security:
+#    user:
+#      name: user
+#      password: 123456
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+swagger:
+  enable: true
+  application-name: xxx系统API说明
+  application-version: 1.0
+  application-description: springfox swagger 3.0整合Demo
+  try-host: http://localhost:${server.port}
+
+jwt:
+  token:
+    expire: 60
+    secret: chao
+    header: Authorization
